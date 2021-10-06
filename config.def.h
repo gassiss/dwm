@@ -7,6 +7,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
+static const int horizpadbar        = 5;
+static const int vertpadbar         = 11;
 
 #include "themes/gruvbox.h"
 
