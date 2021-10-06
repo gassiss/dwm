@@ -7,6 +7,9 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
+
+#include "themes/gruvbox.h"
+
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -14,13 +17,13 @@ static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
-	[SchemeStatus]  = { col_gray3, col_gray1,  "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]  = { col_gray4, col_cyan,  "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
-  [SchemeTagsNorm]  = { col_gray3, col_gray1,  "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-  [SchemeInfoSel]  = { col_gray4, col_cyan,  "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
-  [SchemeInfoNorm]  = { col_gray3, col_gray1,  "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeNorm] = { gray3, black, gray2 },
+	[SchemeSel]  = { gray4, blue,  gray2  },
+	[SchemeStatus]  = { gray3, black,  black  }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeTagsSel]  = { green, gray2,  black  }, // Tagbar left selected {text,background,not used but cannot be empty}
+  [SchemeTagsNorm]  = { gray3, black,  black  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+  [SchemeInfoSel]  = { col_gray4, black,  black  }, // infobar middle  selected {text,background,not used but cannot be empty}
+  [SchemeInfoNorm]  = { col_gray3, black,  black  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
