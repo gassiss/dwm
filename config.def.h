@@ -18,7 +18,7 @@ static const char col_cyan[]        = "#005577";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { gray3, black, gray2 },
-	[SchemeSel]  = { gray4, blue,  gray2  },
+	[SchemeSel]  = { gray4, blue,  green  },
 	[SchemeStatus]  = { gray3, black,  black  }, // Statusbar right {text,background,not used but cannot be empty}
 	[SchemeTagsSel]  = { green, gray2,  black  }, // Tagbar left selected {text,background,not used but cannot be empty}
   [SchemeTagsNorm]  = { gray3, black,  black  }, // Tagbar left unselected {text,background,not used but cannot be empty}
@@ -78,8 +78,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.01} },
+	{ MODKEY|ShiftMask,             XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.01} },
+	{ MODKEY|ShiftMask,             XK_l,      setmfact,       {.f = +0.05} },
 	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
